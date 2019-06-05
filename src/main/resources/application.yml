@@ -1,0 +1,27 @@
+
+server.port: 8083
+server:
+  servlet:
+    context-path: /jpa
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: info # 总的日志级别,会覆盖logback中的root级别
+    #com.reven.controller: info # 指定包的日志级别
+    
+# 数据库配置
+spring.datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+  username: root
+  password: 123456
+# jpa相关配置
+spring.jpa: 
+  database: MYSQL
+  show-sql: true
+  hibernate: 
+    ddl-auto: update
+    naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy  #?
+  properties.hibernate.dialect:  org.hibernate.dialect.MySQL5Dialect   #?
