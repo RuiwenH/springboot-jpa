@@ -1,6 +1,7 @@
 
 # 功能
 * BaseRepository
+* Repository添加自定义方法
 * 增删改
 * 查
 * 分页查
@@ -24,6 +25,8 @@
 * 分页查找 http://localhost:8083/jpa/user/findAll/2/10
 * 分页查找 http://localhost:8083/jpa/user/findAll/0/5  
 * 分页查找超过总页数 http://localhost:8083/jpa/user/findAll/100/5
+
+* 自定义Repository方法查询 http://localhost:8083/jpa/user/gorupByAddres
 
 
 # 参考文章

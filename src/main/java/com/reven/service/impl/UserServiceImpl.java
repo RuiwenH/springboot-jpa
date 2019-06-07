@@ -1,6 +1,7 @@
 package com.reven.service.impl;
 
 import java.util.Iterator;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -33,5 +34,10 @@ public class UserServiceImpl extends AbstractService<User, Integer> implements U
         Page<User> users = userRepository.findAll(pageable);
         Iterator<User> userIterator = users.iterator();
         return userIterator;
+    }
+
+    @Override
+    public List<Object[]> gorupByAddres() {
+        return userRepository.gorupByAddres();
     }
 }

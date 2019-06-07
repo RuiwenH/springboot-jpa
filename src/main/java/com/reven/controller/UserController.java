@@ -1,9 +1,7 @@
 package com.reven.controller;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -12,9 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.reven.controller.common.ResResult;
@@ -95,6 +91,12 @@ public class UserController {
     public ResResult findAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize) {
         Page<User> page = userService.findAll(pageNum, pageSize);
         return ResResult.success(page);
+    }
+    
+    //自定义Repository方法查询
+    @GetMapping(value = "/gorupByAddres")
+    public ResResult gorupByAddres() {
+        return ResResult.success(userService.gorupByAddres());
     }
 
 }
