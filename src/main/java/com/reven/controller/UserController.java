@@ -1,9 +1,7 @@
 package com.reven.controller;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -12,9 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.reven.controller.common.ResResult;
@@ -82,19 +78,23 @@ public class UserController {
         List<User> list = userService.findBy(attr, value);
         return ResResult.success(list);
     }
-    
+
     @GetMapping(value = "/findAll")
-    public ResResult findAll()
-            throws ReflectiveOperationException {
+    public ResResult findAll() throws ReflectiveOperationException {
         List<User> list = userService.findAll();
         return ResResult.success(list);
     }
-
 
     @GetMapping(value = "/findAll/{pageNum}/{pageSize}")
     public ResResult findAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize) {
         Page<User> page = userService.findAll(pageNum, pageSize);
         return ResResult.success(page);
+    }
+
+    @GetMapping(value = "/findByCriterion")
+    public ResResult findByCriterion(String userName) {
+        List<User> list = userService.findByCriterion(userName);
+        return ResResult.success(list);
     }
 
 }

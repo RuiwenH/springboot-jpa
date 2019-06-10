@@ -1,6 +1,7 @@
 
 # 功能
 * BaseRepository
+* 通用对条件查询
 * 增删改
 * 查
 * 分页查
@@ -24,6 +25,7 @@
 * 分页查找 http://localhost:8083/jpa/user/findAll/2/10
 * 分页查找 http://localhost:8083/jpa/user/findAll/0/5  
 * 分页查找超过总页数 http://localhost:8083/jpa/user/findAll/100/5
+* 通用对条件查询 http://localhost:8083/jpa/user/findByCriterion?userName=lisi
 
 
 # 参考文章
@@ -36,4 +38,6 @@
 * QueryByExampleExecutor接口的查询 https://blog.csdn.net/zhao_tuo/article/details/78604324
 * spring data jpa 定义全局接口BaseDao https://blog.csdn.net/yingxiake/article/details/51017797
 * 自定义Repository,BaseRepository https://blog.csdn.net/xiao_xuwen/article/details/53579353
+
+* https://blog.csdn.net/weixin_43254077/article/details/86596790
 
