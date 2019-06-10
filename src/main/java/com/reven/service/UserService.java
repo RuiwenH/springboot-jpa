@@ -10,5 +10,7 @@ public interface UserService  extends IBaseService<User, Integer> {
     List<User> findByCriterion(String userName);
     
     
+
+     List<Object[]> gorupByAddres();
      
 }

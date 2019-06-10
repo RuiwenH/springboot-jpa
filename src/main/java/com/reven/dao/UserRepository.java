@@ -9,7 +9,7 @@ import com.reven.common.BaseRepository;
 import com.reven.entity.User;
 
 @Repository
-public interface UserRepository extends BaseRepository<User, Integer> {
+public interface UserRepository extends BaseRepository<User, Integer>,UserCustomDao {
 
     //自定义repository。手写sql
     @Query(value = "update user set name=?1 where id=?4",nativeQuery = true)   //占位符传值形式
@@ -18,5 +18,4 @@ public interface UserRepository extends BaseRepository<User, Integer> {
 
     @Query("from User u where u.userName=:userName")   //SPEL表达式
     User findUser(@Param("userName") String userName);// 参数userName 映射到数据库字段userName
-    
 }

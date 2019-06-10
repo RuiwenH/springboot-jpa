@@ -25,4 +25,9 @@ public class UserServiceImpl extends AbstractService<User, Integer> implements U
         criteria.add(Restrictions.lte("id", 20,true));
         return userRepository.findAll(criteria);
     }
+
+    @Override
+    public List<Object[]> gorupByAddres() {
+        return userRepository.gorupByAddres();
+    }
 }

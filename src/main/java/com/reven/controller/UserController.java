@@ -90,6 +90,12 @@ public class UserController {
         Page<User> page = userService.findAll(pageNum, pageSize);
         return ResResult.success(page);
     }
+    
+    //自定义Repository方法查询
+    @GetMapping(value = "/gorupByAddres")
+    public ResResult gorupByAddres() {
+        return ResResult.success(userService.gorupByAddres());
+    }
 
     @GetMapping(value = "/findByCriterion")
     public ResResult findByCriterion(String userName) {
