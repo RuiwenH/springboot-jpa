@@ -1,6 +1,7 @@
 
 # 功能
 * BaseRepository
+* 通用对条件查询
 * Repository添加自定义方法
 * 增删改
 * 查
@@ -27,7 +28,7 @@
 * 分页查找 http://localhost:8083/jpa/user/findAll/2/10
 * 分页查找 http://localhost:8083/jpa/user/findAll/0/5  
 * 分页查找超过总页数 http://localhost:8083/jpa/user/findAll/100/5
-
+* 通用对条件查询 http://localhost:8083/jpa/user/findByCriterion?userName=lisi
 * 自定义Repository方法查询 http://localhost:8083/jpa/user/gorupByAddres
 * hql条件更新对象 
 

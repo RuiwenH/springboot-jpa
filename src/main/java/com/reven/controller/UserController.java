@@ -78,14 +78,12 @@ public class UserController {
         List<User> list = userService.findBy(attr, value);
         return ResResult.success(list);
     }
-    
+
     @GetMapping(value = "/findAll")
-    public ResResult findAll()
-            throws ReflectiveOperationException {
+    public ResResult findAll() throws ReflectiveOperationException {
         List<User> list = userService.findAll();
         return ResResult.success(list);
     }
-
 
     @GetMapping(value = "/findAll/{pageNum}/{pageSize}")
     public ResResult findAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize) {
@@ -97,6 +95,12 @@ public class UserController {
     @GetMapping(value = "/gorupByAddres")
     public ResResult gorupByAddres() {
         return ResResult.success(userService.gorupByAddres());
+    }
+
+    @GetMapping(value = "/findByCriterion")
+    public ResResult findByCriterion(String userName) {
+        List<User> list = userService.findByCriterion(userName);
+        return ResResult.success(list);
     }
 
 }
