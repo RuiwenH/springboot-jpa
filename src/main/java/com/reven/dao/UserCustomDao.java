@@ -9,4 +9,6 @@ public interface UserCustomDao {
     List<Object[]> gorupByAddres();
 
     int updateAge();
+
+    void useSession();
 }

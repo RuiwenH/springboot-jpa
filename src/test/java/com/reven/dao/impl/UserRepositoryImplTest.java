@@ -25,5 +25,11 @@ public class UserRepositoryImplTest extends SpringbootJpaApplicationTests {
     public void testUpdateAge() {
         System.out.println(userRepositoryImpl.updateAge());
     }
+    
+    @Test
+    public void testUseSession() {
+        userRepositoryImpl.useSession();
+    }
+
 
 }
