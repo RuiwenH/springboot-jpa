@@ -6,9 +6,11 @@
 * 查
 * 分页查
 * 多表关联查询 待添加
+* 原生sql查询
+* hql查询
 
 # 技术栈
-* 多表查询的工具框架 推荐QueryDSL
+* 多表查询的工具框架 推荐QueryDSL？
 
 # 测试地址
 * 添加数据 http://localhost:8083/jpa/user/insert?userName=zhangsan&birthday=2000-01-03&sex=male&address=shenzhen
@@ -27,6 +29,7 @@
 * 分页查找超过总页数 http://localhost:8083/jpa/user/findAll/100/5
 
 * 自定义Repository方法查询 http://localhost:8083/jpa/user/gorupByAddres
+* hql条件更新对象 
 
 
 # 参考文章

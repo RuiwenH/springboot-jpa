@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserCustomDao {
     List<Object[]> gorupByAddres();
+
+    int updateAge();
 }

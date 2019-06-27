@@ -22,8 +22,9 @@ public class User {
     private Integer id;
     @Column(nullable = false)
     private String userName;
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
     private String sex;
     private String address;
+    private Integer age;
 }
